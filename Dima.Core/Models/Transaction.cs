@@ -1,3 +1,5 @@
+using Dima.Core.Enums;
+
 namespace Dima.Core.Models
 {
     public class Transaction
@@ -8,7 +10,7 @@ namespace Dima.Core.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? PaidOrReceivedAt { get; set; }
 
-        public int Type { get; set; }
+        public ETransactionTypes Type { get; set; } = ETransactionTypes.Withdraw;
 
         public decimal Amount { get; set; }
 
